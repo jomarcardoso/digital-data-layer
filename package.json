@@ -1,0 +1,25 @@
+{
+  "name": "digital-data-layer",
+  "version": "0.1.0",
+  "description": "create the object digital data layer",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomarcardoso/digital-data-layer.git"
+  },
+  "keywords": [
+    "datalayer"
+  ],
+  "author": "Jomar Cardoso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jomarcardoso/digital-data-layer/issues"
+  },
+  "homepage": "https://github.com/jomarcardoso/digital-data-layer#readme",
+  "dependencies": {
+    "typescript": "^3.9.2"
+  }
+}
