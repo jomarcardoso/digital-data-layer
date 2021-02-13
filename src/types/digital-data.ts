@@ -7,10 +7,10 @@ import { Component } from './component';
 import { User } from './user';
 import { Privacy } from './privacy';
 
-export interface DigitalDataLayer<ShippingMethod> {
+export interface DigitalData<ShippingMethod> {
   pageInstanceID: string;
   page: Page;
-  product: Array<Product>;
+  product: Array<Product<ShippingMethod>>;
   cart: Cart<ShippingMethod>;
   transaction: Transaction<ShippingMethod>;
   event: Array<DigitalDataEvent>;

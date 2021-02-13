@@ -1,1 +1,1 @@
-export { DigitalDataLayer } from './types/digital-data-layer';
+export { DigitalData as DigitalDataLayer } from './types/digital-data';

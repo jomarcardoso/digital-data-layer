@@ -5,13 +5,13 @@ interface CartPrice<ShippingMethod> extends Price<ShippingMethod> {
   cartTotal: number;
 }
 
-interface CartProduct extends Product {
+interface CartProduct<ShippingMethod> extends Product<ShippingMethod> {
   quantity: number;
 }
 
 export interface Cart<ShippingMethod> {
   cartID: string;
   price: CartPrice<ShippingMethod>;
-  item: Array<CartProduct>;
+  item: Array<CartProduct<ShippingMethod>>;
   attributes?: Record<string, unknown>;
 }

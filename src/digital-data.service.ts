@@ -1,11 +1,11 @@
-import { DigitalDataLayer } from './types/digital-data-layer';
-import { Currency } from './types/primitive';
+import { DigitalData } from './types/digital-data';
+import { Country, Currency } from './types/primitive';
 
 enum ShippingMethod {
   UPS = 'UPS'
 }
 
-const digitalData: DigitalDataLayer<ShippingMethod> = {
+const digitalData: DigitalData<ShippingMethod> = {
   pageInstanceID: 'namePage-environment',
   page: {
     pageInfo: {
@@ -64,6 +64,11 @@ const digitalData: DigitalDataLayer<ShippingMethod> = {
             manufacturer: 'Pharma',
             size: '300ml',
           },
+          category: {
+            primaryCategory: 'Haircare',
+            subCategory1: "Men's",
+            productType: 'Thinning Hair Treatments',
+          },
         },
       ], // lista de outros produtos lincados
       attributes: {
@@ -112,7 +117,7 @@ const digitalData: DigitalDataLayer<ShippingMethod> = {
           currency: Currency.BRL,
           taxRate: 0.2,
           shipping: 5.0,
-          shippingMethod: 'UPS',
+          shippingMethod: ShippingMethod.UPS,
           priceWithTax: 120,
         },
         linkedProduct: [
@@ -126,6 +131,11 @@ const digitalData: DigitalDataLayer<ShippingMethod> = {
               productThumbnail: 'http://site.com/rog300_thumb.png',
               manufacturer: 'Pharma',
               size: '300ml',
+            },
+            category: {
+              primaryCategory: 'Haircare',
+              subCategory1: "Men's",
+              productType: 'Thinning Hair Treatments',
             },
           },
         ], // lista de outros produtos lincados
@@ -199,7 +209,7 @@ const digitalData: DigitalDataLayer<ShippingMethod> = {
           currency: Currency.BRL,
           taxRate: 0.2,
           shipping: 5.0,
-          shippingMethod: 'UPS',
+          shippingMethod: ShippingMethod.UPS,
           priceWithTax: 120,
         },
         linkedProduct: [
