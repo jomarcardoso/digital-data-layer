@@ -1,0 +1,1 @@
+export { DigitalDataLayer } from './types/digital-data-layer';

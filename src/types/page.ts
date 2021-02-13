@@ -24,5 +24,5 @@ export interface Page {
     publisher: string;
   };
   category: PageCategory;
-  attributes?: Object
+  attributes?: Record<string, unknown>;
 }

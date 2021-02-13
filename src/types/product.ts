@@ -18,5 +18,5 @@ export interface Product {
   };
   category: ProductCategory;
   linkedProduct: Array<Product>;
-  attributes?: Object
+  attributes?: Record<string, unknown>;
 }

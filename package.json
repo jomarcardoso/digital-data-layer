@@ -4,7 +4,9 @@
   "description": "create the object digital data layer",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "test"
+    "tsc": "tsc",
+    "lint": "eslint ./src/**/*.ts --fix",
+    "prettier": "prettier ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,10 @@
     "url": "https://github.com/jomarcardoso/digital-data-layer/issues"
   },
   "homepage": "https://github.com/jomarcardoso/digital-data-layer#readme",
-  "dependencies": {
-    "typescript": "^3.9.2"
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.1.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.5"
   }
 }

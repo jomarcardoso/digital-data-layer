@@ -12,5 +12,5 @@ export interface Component {
     description?: string;
   };
   category: ComponentCateogory;
-  attributes: Object;
+  attributes: Record<string, unknown>;
 }

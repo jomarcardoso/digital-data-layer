@@ -1,9 +1,8 @@
-import { Category } from "./primitive";
+import { Category } from './primitive';
 
 interface EventCategory extends Category {
   subCategory1?: string;
 }
-
 
 export interface DigitalDataEvent {
   eventInfo: {
@@ -15,5 +14,5 @@ export interface DigitalDataEvent {
     effect: string;
   };
   category: EventCategory;
-  attributes: Object;
+  attributes: Record<string, unknown>;
 }
