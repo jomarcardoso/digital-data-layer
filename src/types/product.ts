@@ -1,11 +1,10 @@
 import { Category, Price } from './primitive';
 
-interface ProductCategory extends Category {
-  subCategory1?: string;
+interface ProductCategory<PrimaryCategory> extends Category<PrimaryCategory> {
   productType?: string;
 }
 
-export interface Product<ShippingMethod> {
+export interface Product<ShippingMethod, PrimaryCategory> {
   productInfo: {
     productID: string;
     productName: string;
@@ -18,9 +17,8 @@ export interface Product<ShippingMethod> {
     color?: string;
     size?: string;
   };
-  category?: ProductCategory;
-  linkedProduct?: Array<Product<ShippingMethod>>;
+  category?: ProductCategory<PrimaryCategory>;
+  linkedProduct?: Array<Product<ShippingMethod, PrimaryCategory>>;
   attributes?: Record<string, unknown>;
   price?: Price<ShippingMethod>;
-  quantity?: number;
 }

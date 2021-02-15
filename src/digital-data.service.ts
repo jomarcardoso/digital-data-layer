@@ -2,10 +2,34 @@ import { DigitalData } from './types/digital-data';
 import { Country, Currency } from './types/primitive';
 
 enum ShippingMethod {
-  UPS = 'UPS'
+  UPS = 'UPS',
 }
 
-const digitalData: DigitalData<ShippingMethod> = {
+enum PagePrimaryCategory {
+  FAQ = 'FAQ Pages',
+  HOME = 'home',
+}
+
+enum ProductPrimaryCategory {
+  HAIRCARE = 'Haircare',
+  SHOE = 'Shoe',
+}
+
+enum ComponentPrimaryCategory {
+  VIDEO = 'video',
+}
+
+enum PrimaryCategory {
+  PORTAL = 'portal',
+}
+
+const digitalData: DigitalData<
+  ShippingMethod,
+  PagePrimaryCategory,
+  ProductPrimaryCategory,
+  ComponentPrimaryCategory,
+  PrimaryCategory
+> = {
   pageInstanceID: 'namePage-environment',
   page: {
     pageInfo: {
@@ -27,7 +51,7 @@ const digitalData: DigitalData<ShippingMethod> = {
       publisher: 'BusDev',
     },
     category: {
-      primaryCategory: 'FAQ Pages',
+      primaryCategory: PagePrimaryCategory.FAQ,
       subCategory1: 'ProductInfo',
       pageType: 'FAQ',
     },
@@ -48,7 +72,7 @@ const digitalData: DigitalData<ShippingMethod> = {
         size: '300ml',
       },
       category: {
-        primaryCategory: 'Haircare',
+        primaryCategory: ProductPrimaryCategory.HAIRCARE,
         subCategory1: "Men's",
         productType: 'Thinning Hair Treatments',
       },
@@ -65,7 +89,7 @@ const digitalData: DigitalData<ShippingMethod> = {
             size: '300ml',
           },
           category: {
-            primaryCategory: 'Haircare',
+            primaryCategory: ProductPrimaryCategory.HAIRCARE,
             subCategory1: "Men's",
             productType: 'Thinning Hair Treatments',
           },
@@ -105,7 +129,7 @@ const digitalData: DigitalData<ShippingMethod> = {
           size: '300ml',
         },
         category: {
-          primaryCategory: 'Haircare',
+          primaryCategory: ProductPrimaryCategory.HAIRCARE,
           subCategory1: "Men's",
           productType: 'Thinning Hair Treatments',
         },
@@ -133,7 +157,7 @@ const digitalData: DigitalData<ShippingMethod> = {
               size: '300ml',
             },
             category: {
-              primaryCategory: 'Haircare',
+              primaryCategory: ProductPrimaryCategory.HAIRCARE,
               subCategory1: "Men's",
               productType: 'Thinning Hair Treatments',
             },
@@ -199,7 +223,7 @@ const digitalData: DigitalData<ShippingMethod> = {
           size: '300ml',
         },
         category: {
-          primaryCategory: 'bota',
+          primaryCategory: ProductPrimaryCategory.SHOE,
         },
         quantity: 3,
         price: {
@@ -246,7 +270,7 @@ const digitalData: DigitalData<ShippingMethod> = {
         effect: 'include portal 1234',
       },
       category: {
-        primaryCategory: 'Portal',
+        primaryCategory: PrimaryCategory.PORTAL,
         subCategory1: 'dashboard',
       },
       attributes: {
@@ -265,7 +289,7 @@ const digitalData: DigitalData<ShippingMethod> = {
         description: 'Hair Treatment Video',
       },
       category: {
-        primaryCategory: 'Haircare',
+        primaryCategory: ComponentPrimaryCategory.VIDEO,
         subCategory1: 'Videos',
         componentType: 'Flash Movie',
       },

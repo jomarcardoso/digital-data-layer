@@ -1,10 +1,10 @@
 import { Category } from './primitive';
 
-interface PageCategory extends Category {
+interface PageCategory<PrimaryCategory> extends Category<PrimaryCategory> {
   pageType?: string;
 }
 
-export interface Page {
+export interface Page<PrimaryCategory> {
   pageInfo: {
     pageID: string;
     pageName: string;
@@ -23,6 +23,6 @@ export interface Page {
     industryCodes: string;
     publisher: string;
   };
-  category: PageCategory;
+  category: PageCategory<PrimaryCategory>;
   attributes?: Record<string, unknown>;
 }

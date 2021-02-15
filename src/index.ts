@@ -1,1 +1,2 @@
-export { DigitalData as DigitalDataLayer } from './types/digital-data';
+export { DigitalData } from './types/digital-data';
+export { Cart } from './types/cart';

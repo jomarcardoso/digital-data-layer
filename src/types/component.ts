@@ -1,16 +1,15 @@
 import { Category } from './primitive';
 
-interface ComponentCateogory extends Category {
-  subCategory1: string;
+interface ComponentCategory<PrimaryCategory> extends Category<PrimaryCategory> {
   componentType: string;
 }
 
-export interface Component {
+export interface Component<PrimaryCategory> {
   componentInfo: {
     componentID: string;
     componentName?: string;
     description?: string;
   };
-  category: ComponentCateogory;
+  category: ComponentCategory<PrimaryCategory>;
   attributes: Record<string, unknown>;
 }

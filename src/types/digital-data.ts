@@ -7,14 +7,20 @@ import { Component } from './component';
 import { User } from './user';
 import { Privacy } from './privacy';
 
-export interface DigitalData<ShippingMethod> {
+export interface DigitalData<
+  ShippingMethod,
+  PagePrimaryCategory,
+  ProductPrimaryCategory,
+  ComponentPrimaryCategory,
+  PrimaryCategory
+> {
   pageInstanceID: string;
-  page: Page;
-  product: Array<Product<ShippingMethod>>;
-  cart: Cart<ShippingMethod>;
-  transaction: Transaction<ShippingMethod>;
-  event: Array<DigitalDataEvent>;
-  component: Array<Component>;
+  page: Page<PagePrimaryCategory>;
+  product: Array<Product<ShippingMethod, ProductPrimaryCategory>>;
+  cart: Cart<ShippingMethod, ProductPrimaryCategory>;
+  transaction: Transaction<ShippingMethod, ProductPrimaryCategory>;
+  event: Array<DigitalDataEvent<PrimaryCategory>>;
+  component: Array<Component<ComponentPrimaryCategory>>;
   user: Array<User>;
   privacy: Privacy;
   version: string;

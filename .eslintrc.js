@@ -10,7 +10,7 @@ module.exports = {
     worker: true
   },
   rules: {
-    'import/no-default-export': null,
+    'import/no-default-export': 'off',
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
     'padding-line-between-statements': [
       'error',

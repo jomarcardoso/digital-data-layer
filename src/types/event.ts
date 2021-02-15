@@ -1,10 +1,10 @@
 import { Category } from './primitive';
 
-interface EventCategory extends Category {
+interface EventCategory<PrimaryCategory> extends Category<PrimaryCategory> {
   subCategory1?: string;
 }
 
-export interface DigitalDataEvent {
+export interface DigitalDataEvent<PrimaryCategory> {
   eventInfo: {
     eventName: string;
     eventAction: string;
@@ -13,6 +13,6 @@ export interface DigitalDataEvent {
     timeStamp: Date;
     effect: string;
   };
-  category: EventCategory;
+  category: EventCategory<PrimaryCategory>;
   attributes: Record<string, unknown>;
 }

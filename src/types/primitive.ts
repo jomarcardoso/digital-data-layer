@@ -1,5 +1,5 @@
-export interface Category {
-  primaryCategory: string;
+export interface Category<PrimaryCategory> {
+  primaryCategory: PrimaryCategory;
   subCategory1?: string;
 }
 
@@ -122,7 +122,7 @@ export enum Currency {
   YER = 'YER',
   ZAR = 'ZAR',
   ZMK = 'ZMK',
-  ZWL = 'ZWL'
+  ZWL = 'ZWL',
 }
 
 export interface Price<ShippingMethod> {
@@ -265,7 +265,7 @@ export enum Country {
   KE = 'Kenya',
   KI = 'Kiribati',
   KR = 'Korea, Republic of',
-  KP = 'Korea, Democratic People\'s Republic of',
+  KP = "Korea, Democratic People's Republic of",
   KW = 'Kuwait',
   KG = 'Kyrgyzstan',
   LA = 'Lao Peoples Democratic Republic',
@@ -395,7 +395,7 @@ export enum Country {
   EH = 'Western Sahara',
   YE = 'Yemen',
   ZM = 'Zambia',
-  ZW = 'Zimbabwe'
+  ZW = 'Zimbabwe',
 }
 
 export interface Address {
