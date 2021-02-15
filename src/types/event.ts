@@ -1,10 +1,11 @@
 import { Category } from './primitive';
 
-interface EventCategory<PrimaryCategory> extends Category<PrimaryCategory> {
+export interface EventCategory<PrimaryCategory>
+  extends Category<PrimaryCategory> {
   subCategory1?: string;
 }
 
-export interface DigitalDataEvent<PrimaryCategory> {
+export interface Event<PrimaryCategory> {
   eventInfo: {
     eventName: string;
     eventAction: string;

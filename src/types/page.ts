@@ -1,6 +1,7 @@
 import { Category } from './primitive';
 
-interface PageCategory<PrimaryCategory> extends Category<PrimaryCategory> {
+export interface PageCategory<PrimaryCategory>
+  extends Category<PrimaryCategory> {
   pageType?: string;
 }
 

@@ -135,7 +135,6 @@ export interface Price<ShippingMethod> {
   shippingMethod: ShippingMethod;
   priceWithTax: number;
 }
-
 export interface Profile {
   profileInfo: {
     profileID: string;

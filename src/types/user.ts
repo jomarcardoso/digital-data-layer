@@ -1,6 +1,6 @@
 import { Profile, Address } from './primitive';
 
-interface UserProfile extends Profile {
+export interface UserProfile extends Profile {
   address: Address;
   social?: {
     instagram?: string;

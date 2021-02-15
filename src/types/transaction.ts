@@ -1,7 +1,8 @@
 import { CartProduct } from './cart';
 import { Profile, Address, Price } from './primitive';
 
-interface TransactionPrice<ShippingMethod> extends Price<ShippingMethod> {
+export interface TransactionPrice<ShippingMethod>
+  extends Price<ShippingMethod> {
   transactionTotal: number;
 }
 

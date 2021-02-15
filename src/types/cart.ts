@@ -1,11 +1,12 @@
 import { Price } from './primitive';
 import { Product } from './product';
 
-interface CartPrice<ShippingMethod> extends Price<ShippingMethod> {
+export interface CartPrice<ShippingMethod> extends Price<ShippingMethod> {
   cartTotal: number;
 }
 
-export interface CartProduct<ShippingMethod, PrimaryCategory> extends Product<ShippingMethod, PrimaryCategory> {
+export interface CartProduct<ShippingMethod, PrimaryCategory>
+  extends Product<ShippingMethod, PrimaryCategory> {
   quantity: number;
 }
 

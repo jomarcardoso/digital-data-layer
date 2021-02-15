@@ -1,6 +1,7 @@
 import { Category, Price } from './primitive';
 
-interface ProductCategory<PrimaryCategory> extends Category<PrimaryCategory> {
+export interface ProductCategory<PrimaryCategory>
+  extends Category<PrimaryCategory> {
   productType?: string;
 }
 
